@@ -1,0 +1,108 @@
+{% include 'user/u_header.html' %}
+{% include 'user/sidebar.html' %}
+
+
+
+<div class="col-md-8">
+    <div class="notice-board">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              your Smart Card Issued 
+              <!-- <div class="pull-right" >
+                  <div class="dropdown">
+<button class="btn btn-success dropdown-toggle btn-xs" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+<span class="glyphicon glyphicon-cog"></span>
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="view_profile">Refresh</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="user_logout">Logout</a></li>
+</ul>
+</div> -->
+</div>
+</div>
+          <div class="panel-body user_prof">
+   
+              <ul style="list-style: none; padding-left: 0px;">
+                 <li style="
+border-bottom: 1px solid #E5E5E5;">
+                    <label style="text-transform:capitalize;">
+                   <span class="glyphicon glyphicon-user text-success" ></span> 
+                        <!-- {{demo.valid_from}} -->
+                        <!-- {{demo.valid_from}} -->
+                        {{a.first_name}}
+                               
+                    </label>
+                  </li>
+                   <li>
+                        
+                   <span class="glyphicon glyphicon-info-sign text-danger" ></span>  
+                        
+                   {{a.Address}}
+                          </a>
+                  </li>
+                   <li>
+                        <a href="#">
+                   <span class="glyphicon glyphicon-envelope  text-warning" ></span>  
+                   {{a.email}}
+                        
+                          </a>
+                  </li>
+                  <li>
+                       
+                   <span class="glyphicon glyphicon-phone  text-danger" ></span>  
+                   {{a.Phone_no}}
+                          </a>
+                          
+                  </li>
+                  <li>
+                  
+               <span class="glyphicon glyphicon-calendar text-danger" ></span>  
+               Card Type:{{a.Cd_type}}
+                      </a>                        
+              
+                </li>
+                </li>
+                <li>
+                     
+                 <span class="glyphicon glyphicon-calendar text-danger" ></span>  
+                 Valid From:{{demo.valid_from}}
+                        </a>                        
+                
+                  </li>
+                 
+                  <li>
+                   
+               <span class="glyphicon glyphicon-calendar text-danger" ></span>  
+               Valid To:{{demo.valid_to}}
+                      </a>                        
+              
+                </li>
+                <!-- <button id="print-btn">Print</button> -->
+                              </ul>
+                              <button id="print-btn">Print</button>
+
+<div id="printable-content">
+    </div>
+
+<script>
+document.getElementById('print-btn').addEventListener('click', function() {
+  window.print();
+});
+</script>
+              
+          </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+{% include 'user/u_footer.html' %}

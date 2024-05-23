@@ -1,0 +1,173 @@
+{% include 'user/u_header.html' %}
+{% include 'user/sidebar.html' %}
+
+
+
+<div class="col-md-8">
+    <div class="notice-board">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              My Personal Info  
+              <div class="pull-right" >
+                  <div class="dropdown">
+<button class="btn btn-success dropdown-toggle btn-xs" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+<span class="glyphicon glyphicon-cog"></span>
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="view_profile">Refresh</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="user_logout">Logout</a></li>
+</ul>
+</div>
+</div>
+</div>
+          <div class="panel-body user_prof">
+   
+              <ul style="list-style: none; padding-left: 0px;">
+                 <li style="
+border-bottom: 1px solid #E5E5E5;">
+                    <label style="text-transform:capitalize;">
+                   <span class="glyphicon glyphicon-user text-success" ></span> 
+                        {{a.first_name}}
+                               
+                    </label>
+                  </li>
+                   <li>
+                        <a href="#">
+                   <span class="glyphicon glyphicon-info-sign text-danger" ></span>  
+                        
+                   {{a.Address}}
+                          </a>
+                  </li>
+                   <li>
+                        <a href="#">
+                   <span class="glyphicon glyphicon-envelope  text-warning" ></span>  
+                   {{a.email}}
+                        
+                          </a>
+                  </li>
+                  <li>
+                        <a href="#">
+                   <span class="glyphicon glyphicon-phone  text-danger" ></span>  
+                   {{a.Phone_no}}
+                          </a>
+                  </li>
+                 </a>
+                  </li>
+              </ul>
+              
+          </div>
+
+          <div class="panel-footer">
+              <a href="#" class="btn btn-default btn-block"> <i class="glyphicon glyphicon-repeat"></i> All your information is protected.</a>
+       <div class="panel panel-default">
+      <div class="panel-heading">
+         <b>Enter your Account Details</b>
+      </div>
+    <form class="form-horizontal" name="myForm"  method="post" action="view_profile" >
+      <div class="panel-body ">
+        {% csrf_token %}
+<div class="form-group" style="padding-left:20px;">
+<label for="name">Account Holder's Name: </label>
+<input type="text" name="a_name" class="form-control" style="width:400px;" placeholder="Name" onchange="checkchr(this)" required="required">
+
+</div>
+<div class="form-group" style="padding-left:20px;">
+<label for="acc">Account No:</label>
+<input type="text" id="acc" name="acc_no" class="form-control" style="width:400px;" placeholder="A/c No" required="required">
+
+</div>
+
+<div class="form-group" style="padding-left:20px;">
+<label for="b_name">Bank Name:</label>
+<select class="form-control"  name="b_name"  style="width:400px;" required="required"/>
+  <option> ..Choose Bank.....</option>
+   
+  {% for i in bank %}
+  <option value="{{i.id}}">{{i.b_name}}</option>
+  {% endfor%}
+</select>
+</div>
+<div class="form-group" style="padding-left:20px;">
+<label for="cvv">CVV :</label> <a  data-toggle="modal" data-target="#myModal">
+          (?) 
+          </a>
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h4 class="modal-title" id="myModalLabel">Info</h4>
+                      </div>
+                      <div class="modal-body">
+                          CVV is a three digit number printed on the back side of your Bank Account Card.
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+<input type="number" id="cvv" name="cvv" class="form-control" style="width:400px;" placeholder="CVV" required="required">
+
+</div>
+<div class="form-group" style="padding-left:20px;">
+<label for="date">Card's Expiry Month</label>
+<select class="form-control" name="month" style="width:200px;" required="required"/>
+  <option> ..Choose Month.....</option>
+   <option value="January">January</option>
+   <option value="February">February</option>
+   <option value="March">March</option>
+   <option value="January">April</option>
+   <option value="April">May</option>
+   <option value="June">June</option>
+   <option value="July">July</option>
+   <option value="August">August</option>
+   <option value="September">September</option>
+   <option value="October">October</option>
+   <option value="November">November</option>
+   <option value="December">December</option>
+</select>
+
+</div>
+
+<div class="form-group" style="padding-left:20px;">
+<label for="date">Card's Expiry Year</label>
+<input type="number" name="year" class="form-control" style="width:200px;" placeholder="Enter Year" required="required">
+
+
+
+      </div>
+<div class="form-group" style="padding-left:20px;">
+       <button type="submit" class="btn btn-success" name="profile">
+Enter
+</button>
+</div>
+      </div>
+       </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<!-- CONTENT-WRAPPER SECTION END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include 'user/u_footer.html' %}

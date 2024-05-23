@@ -1,0 +1,96 @@
+{% include 'user/u_header.html' %}
+{% include 'user/sidebar.html' %}
+
+           
+<div class="col-md-8">
+    <div class="panel panel-success">
+                        <div class="panel-heading"><b>
+                            Apply for your Smart Ticket </b>  
+                        </div>
+                       
+                        <form class="form-horizontal" name="myForm"  onsubmit="return validateForm();" method="post" action="" >
+                        <div class="panel-body">
+                            {% csrf_token %}
+                    <label>Name</label>
+                <input type="text" class="form-control" name="name" readonly value="{{a.first_name}}" >
+                
+                    <label>Card Type</label>
+                    
+                    <select class="form-control" name="card_type" id="card_type">
+                                         <option value="">--select--</option>
+                                         <option value="Platinum">Platinum</option>
+                                         <option value="Gold">Gold</option>
+                                         <option value="Silver">Silver</option>
+                                         </select>
+                                         <div id="container"></div>
+                    <!--<input type="text" class="form-control" name="amt"  >-->	 
+                            <!--<select class="form-control" name="amt" id="amt" readonly>
+                                         <option value="">--select--</option>
+                                         <option value="3000">3000</option>
+                                         <option value="1500">1500</option>
+                                         <option value="1000">1000</option>
+                                         </select>-->			 
+     
+                    <label>Valid From</label>
+                    <input type="text" class="form-control" value="{{today2}}"  name="v_from" id="demo" readonly>
+                    </br>
+                                     
+                                        <label>Districts</label>
+                                      <select name="district" class="form-control" required="required">
+                                      <option value="">---Select District---</option>
+                                      <option>Kollam</option>
+                                      <option>Kottayam</option>
+                                      <option>Alappuzha</option>
+                                      <option>Ernakulam</option>
+                                      <option>Kannur</option>
+                                      <option>Idukki</option>
+                                      <option>Kasargod</option>
+                                      <option>Kozhikode</option>
+                                      <option>Malappuram</option>
+                                      <option>Palakkad</option>
+                                      <option>Pathanamthitta</option>
+                                      <option>Thiruvananthapuram</option>
+                                      <option>Thrissur</option>
+                                      <option>Wayanad</option>
+                                      </select>
+                                </br>
+                                   
+                                   <!-- <input type="hidden" class="form-control"  name="c_type" value="" readonly>
+                                 <input type="hidden" class="form-control"  name="c_price" value="" readonly> -->
+                                  
+                                   <label>Valid To</label>
+                                    <input type="text" class="form-control"  name="vto" value="{{formatted_date}}" readonly>
+                                    
+                     <hr />
+                     
+                                    <input type = "submit" class="btn btn-success pull-right" value="Continue To Payment" name="smartcard">
+                                    <!-- <div class="hidden-sm hidden-xs action-buttons"> -->
+                                        <!-- <a class='green' href="/smartcard_payment">Continue To Payment
+                                            
+                                        </a> -->
+                                                    </div>
+                                
+                                  </div>
+                                  </form>
+                                 
+                                  </div> 
+                                 </div>
+                            </div>
+                        </div>
+                        </div>
+                  <style>
+                    .green {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+                  </style>      
+                  
+
+
+

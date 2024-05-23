@@ -1,0 +1,72 @@
+{% include 'admins/ad_header.html' %}
+
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Payment</a>
+                </li>
+                <li class="active">View Payment</li>
+            </ul><!-- /.breadcrumb -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="header smaller lighter blue">Payment List</h3>
+
+                            
+                            <!-- div.table-responsive -->
+
+                            <!-- div.dataTables_borderWrap -->
+                            <div>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No</th>
+                                            <th>User Id</th>
+                                            <th>Username</th>
+                                            <th>Card Type</th>	
+                                            <th>Amount</th>
+                                            
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr> {% for card in smartcard_data %}
+                                            <td>{{ forloop.counter }}</td>
+                                            <!-- <td>{{ card.user_id_id }}</td>  # Assuming user_id is the field in tbl_smartcard -->
+                                            <td>{{ card.user.username }}</td>
+                                            <!-- <td>{{ card.user.Card_type }}</td>  # Replace with actual field name -->
+                                            <td></td> 
+                                        </tr>
+                                    {% endfor %}</tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            <!-- PAGE CONTENT ENDS -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.page-content -->
+        </div><!-- /.main-content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include 'admins/ad_footer.html' %}

@@ -1,0 +1,84 @@
+{% include 'admins/ad_header.html' %}
+
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Complaint</a>
+                </li>
+                <li class="active">Complaint Replay</li>
+            </ul><!-- /.breadcrumb -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="header smaller lighter blue">Replay</h3>
+
+       <br>
+   <!-- /.page-header -->
+
+       <div class="row">
+           <div class="col-xs-12">
+               <!-- PAGE CONTENT BEGINS -->
+               <form class="form-horizontal" method="post" name="myForm" action="">
+                {% csrf_token %}
+               
+                      
+
+                   <center></center>
+                   <div class="space-4"></div>
+                   <div class="form-group">
+                       <label class="col-sm-3 control-label no-padding-right" for="form-field-1"></label>
+                   <div class="col-sm-8">
+                           <textarea name="replay" rows="4" class="form-control" cols="25" id="" placeholder="Replay Description" class="col-xs-10 col-sm-5" required></textarea>
+                       </div>
+                       </div>
+                       <div class="space-4"></div>
+                  
+                           <div class="form-group">
+                       <label class="col-sm-3 control-label no-padding-right" for="form-field-1"></label>
+                           <input type="radio" name="g1" value="pending" />pending
+                           <input type="radio" name="g1" value="completed" />completed
+                           </div>
+                           
+                       <input type="hidden" name="user_id"  id="" placeholder="" class="col-xs-10 col-sm-5" required />
+                       
+                       <!--<input type="hidden" name="status"  id="" value="" placeholder="" class="col-xs-10 col-sm-5" required />-->
+                       
+                   <div class="space-4"></div>
+                   <div class="form-group">
+                   <div class="clearfix form-actions">
+                       <div class="col-md-offset-4 col-md-9">
+                           <button class="btn btn-info" type="submit" name="add">
+                               <i class="ace-icon fa fa-check bigger-110"></i>
+                               Submit
+                           </button> 
+                           <!--&nbsp; &nbsp; &nbsp;
+                           <button class="btn" type="reset">
+                               <i class="ace-icon fa fa-undo bigger-110"></i>
+                               Reset
+                           </button>-->
+                       </div>
+                   </div>
+                   </div>
+
+                   </form>
+                   
+                   
+           </div><!-- /.col -->
+       </div><!-- /.row -->
+   </div><!-- /.page-content -->
+   </div>
+</div><!-- /.main-content -->
+
+
+
+
+
+{% include 'admins/ad_footer.html' %}

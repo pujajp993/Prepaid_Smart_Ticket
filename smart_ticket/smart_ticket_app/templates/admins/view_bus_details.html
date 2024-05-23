@@ -1,0 +1,91 @@
+{% include 'admins/ad_header.html' %}
+
+<div class="main-content">
+				<div class="main-content-inner">
+					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+
+							<li>
+								<a href="#">Bus</a>
+							</li>
+							<li class="active">View Bus List</li>
+						</ul><!-- /.breadcrumb -->
+						</div>
+                        
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								View Bus List
+								</h1>
+						</div><!-- /.page-header -->
+                        {% include 'admins/messages.html' %}
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sl No</th>
+                                    <th>Bus No</th>
+                                    <th>Bus Type</th>	
+                                    <th>Source</th>
+                                    <th>Departure Time</th>
+                                    <th>Destination</th>
+                                    <th>Arrival time</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for i in buses %} 
+                                                            
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{i.bus_no}}</td>                                
+                                    <td>{{ i.bus_type_id.Bus_type }}</td> 
+                                    <td>{{i.Source}}</td>
+                                    <td>{{i.Start_time}}</td>
+                                    <td>{{i.Destination}}</td>
+                                    <td>{{i.End_time}}</td>                             
+                                <td>
+                                    <div class="hidden-sm hidden-xs action-buttons">
+                                        <a class='green' href="/edit_bus/{{i.id}}">
+                                            <i class='ace-icon fa fa-pencil bigger-130'></i>
+                                        </a>
+                                        
+                                        <a class="red" href="/delete_bus/{{i.id}}">
+                                            <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                        </a>
+                                     
+                                    </div>
+                                </td>
+                                   {% endfor %}
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <!-- PAGE CONTENT ENDS -->
+    </div><!-- /.col -->
+</div><!-- /.row -->
+</div><!-- /.page-content -->
+</div><!-- /.main-content -->
+
+						
+             
+<script>
+    setTimeout(function(){
+       if($('#msg').length>0){
+          $('#msg').remove();
+       }
+    },2000)
+    </script>
+
+
+
+
+                        
+
+{% include 'admins/ad_footer.html' %}

@@ -1,0 +1,225 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>Prepaid Smart Ticket</title>
+      <link rel="stylesheet" href="{% static 'user/css/components.css' %}">
+      <link rel="stylesheet" href="{% static 'user/css/responsee.css' %}">
+      <link rel="stylesheet" href="{% static 'user/owl-carousel/owl.carousel.css' %}">
+      <link rel="stylesheet" href="{% static 'user/owl-carousel/owl.theme.css' %}">
+      <!-- CUSTOM STYLE -->
+      <link rel="stylesheet" href="{% static 'user/css/template-style.css' %}">
+	  <!-- Bootstrap-CSS --><link rel="stylesheet" href="{% static 'user/css/bootstrap.min.css' %}">
+	  <link rel="stylesheet" href="{% static 'user/css/jquery-ui.css' %}">
+	  <link rel="stylesheet" href="{% static 'user/css/jquery-bootstrap-datepicker.css' %}">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link href="{% static 'asset/css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FONT AWESOME ICONS  -->
+    <link href="{% static 'asset/css/font-awesome.css' %}" rel="stylesheet" />
+  <script src="{% static 'asset/js/jquery-1.11.1.js' %}"></script>
+  <script src="{% static 'user/js/jquery-ui.js' %}"></script>
+ <script src="{% static 'asset/js/bootstrap.js' %}"></script>
+      <style>
+      .bus
+      {
+         background:url("{% static 'user/img/buss.jpg' %}") no-repeat ;
+         background-size:cover !important ;
+         min-height:350px;
+         width:100%;
+      }
+      .content-wrapper {
+    margin-top: 40px;
+    min-height: 600px;
+
+    padding-bottom: 60px;
+
+}
+.container
+{
+	padding-right:1px;
+	padding-left:0px;
+}
+.page-head-line {
+    font-weight: 900;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #92c500;;
+    text-transform: uppercase;
+    color: #92c500;;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.user-settings-wrapper .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 18px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: #92c500;
+    color: #fff;
+}
+
+.user-settings-wrapper {
+    margin-top: 10px;
+}
+
+    .user-settings-wrapper li {
+        display: inline-block;
+    }
+
+    .user-settings-wrapper .dropdown-settings {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .user-settings-wrapper .nav > li > a:hover,.user-settings-wrapper .nav > li > a:focus {
+        text-decoration: none;
+        background-color: #92c500!important;
+    }
+
+    .user-settings-wrapper img {
+        height: 64px;
+        width: 64px;
+        border: 1px solid #000000;
+    }
+
+    .user-settings-wrapper .dropdown-menu {
+        margin: 0px;
+        border-radius: 0px!important;
+        -moz-border-radius: 0px!important;
+        -webkit-border-radius: 0px!important;
+    }
+
+    .user-settings-wrapper .btn {
+        border-radius: 0px!important;
+        -moz-border-radius: 0px!important;
+        -webkit-border-radius: 0px!important;
+    }
+
+    .user-settings-wrapper .media-heading {
+        padding-top: 10px;
+    }
+
+    .left-div {
+    padding-left: 30px;
+    margin-top:200px;
+    margin-bottom: 30px;
+    }
+    .user_prof li{
+      padding: 10px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+      </style>
+                 
+      <!--[if lt IE 9]>
+	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+   </head>
+   <body class="size-1140" onload="myFunction()">
+      <!-- TOP NAV WITH LOGO -->
+      <header>
+         <div id="topbar">
+            <div class="line">
+              <div class="s-12 m-6 l-6">
+                 <p></p>
+               </div>
+               <div class="s-12 m-6 l-6">
+                  <div class="social right">
+                     <a><i class="icon-facebook_circle"></i></a> <a><i class="icon-twitter_circle"></i></a> <a><i class="icon-google_plus_circle"></i></a> <a><i class="icon-instagram_circle"></i></a>
+                  </div>
+               </div>
+            </div>  
+         </div> 
+         <nav>
+            <div class="line">
+               <div class="s-12 l-2">
+                  <p class="logo"><strong>SMARTTICKET</strong></p>
+               </div>
+               <div class="top-nav s-12 l-10">
+                  <p class="nav-text">Custom menu text</p>
+                  <ul class="right">
+                     <li><a href="uhome">Home</a></li>
+                     <li class="dropdown">
+					 <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                               Smart Card
+                     </a>
+					 <div class="dropdown-menu dropdown-settings">
+						<h5><a class="btn btn-success btn-xs" href="smartcard_apply" o onclick="function1()">Apply</a></h5>
+                    </div>
+					 </li>
+					   <li class="dropdown">
+					   <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+										   Ticket
+								 </a>
+					   <div class="dropdown-menu dropdown-settings">
+						<h5><a class="btn btn-success btn-xs" href="cancel_booking">Cancellation</a></h5>
+						 <h5><a  class="btn btn-success btn-xs" href="usr_bus_booking">Booking</a></h5>
+					   </div>
+					   </li>
+					 <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                               Bus Details
+                            </a>
+                            <div class="dropdown-menu dropdown-settings">
+                                <h5><a  class="btn btn-success btn-xs" href="fare">Fare Details</a></h5>
+                                <h5><a  class="btn btn-success btn-xs" href="user_view_bus_details">Bus Details</a></h5>
+                               
+                                 <h5><a  class="btn btn-success btn-xs" href="user_view_schedule">Schedule Details</a></h5>
+                            </div>
+                        </li>
+                     <li><a href="complaint">Complaints</a></li>
+                     <li><a href="user_complaint_replay">Complaint Reply</a></li>
+                      <li><a href="feedback">Feedback</a></li>
+                     
+               </div>
+            </div>
+         </nav>		
+      </header>  
+      <section>
+      <div class="container bus" style="height:300px;">
+  <div class="left-div">
+                <div class="user-settings-wrapper">
+                    <ul class="nav">
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-settings">
+                                <div class="media">
+                                   
+                                    <div class="media-body">
+
+                                        <h4 class="media-heading" style="text-transform:capitalize;"></h4>
+                                        <h5> <a href="edit_profile" class="btn btn-info btn-sm"> Edit Profile</a>&nbsp;
+                                            <a href="user_logout" class="btn btn-success btn-sm">Logout</a></h5>
+
+                                    </div>
+                                </div>
+                                <hr />
+                                <h5><strong><a href="view_profile" >My Profile</a></strong></h5>
+                                  <hr />
+                                <a href="change_password" class="btn btn-info btn-sm">Change Password</a>
+
+                                
+
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+</div>
+<script type="text/javascript">
+  function function1()
+  {
+    var x = alert("Confirm your profile completion to apply for smart card!Otherwise cancel this message..");
+  }
+</script>

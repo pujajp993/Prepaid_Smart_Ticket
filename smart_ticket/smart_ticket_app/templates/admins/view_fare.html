@@ -1,0 +1,64 @@
+{% include 'admins/ad_header.html' %}
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Fare</a>
+                </li>
+                <li class="active">View Fare</li>
+            </ul><!-- /.breadcrumb -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="header smaller lighter blue">Fare List</h3>
+
+                            
+                            <!-- div.table-responsive -->
+
+                            <!-- div.dataTables_borderWrap -->
+                            <div>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No</th>
+                                            <th>Bus Type</th>	
+                                            <th>Minimum Charge</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        {% for i in buses %} 
+                                        <tr>
+                                                <td>{{forloop.counter}}</td>                                                                      
+                                                <td>{{ i.bus_type_id.Bus_type }}</td> 
+                                                <td>{{i.min_charge}}</td> 
+                                            </td>
+                                            {% endfor %}
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include 'admins/ad_footer.html' %}

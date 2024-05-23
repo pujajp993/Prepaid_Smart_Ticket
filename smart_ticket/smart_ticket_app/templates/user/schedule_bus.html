@@ -1,0 +1,173 @@
+{% include 'admins/ad_header.html' %}
+
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Schedule</a>
+                </li>
+                <li class="active">Schedule Bus</li>
+            </ul><!-- /.breadcrumb -->
+            </div>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <h1>
+                        Schedule Bus
+                        </h1>
+                </div><!-- /.page-header -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- PAGE CONTENT BEGINS -->
+                        {% if no_buses %}
+                        <p>No buses without schedules found.</p>
+                        {% else %}
+                    <form class="form-horizontal" method="post" action="/schedule_bus1/{{schedule.id}}">
+                        {% include 'admins/messages.html' %}
+                        {% csrf_token %}
+                        {% if bus %}
+                    <input type="hidden" name="bus_id" value="">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Bus No</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" readonly name="bus_no" value="{{bus.bus_no}}"  id="form-field-1" placeholder="Bus No" class="col-xs-10 col-sm-5" />
+                            </div>
+                        </div>
+                        
+                        <div class="space-4"></div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">Source</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" readonly required name="source" value="{{bus.Source}}"  id="form-field-1" placeholder="Starting" class="col-xs-10 col-sm-5"  />
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Starting Time </label>
+
+                            <div class="col-sm-9">
+                                <input type="text"readonly required name="end_time" value="{{bus.Start_time}}" id="form-field-2" placeholder=" Arrival Time" class="col-xs-10 col-sm-5"  />
+                                </div>
+                        </div>
+                        
+                        <div class="space-4"></div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Destination </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" readonly required name="destination" value="{{bus.Destination}}" id="form-field-1" placeholder="Destination" class="col-xs-10 col-sm-5"  />
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Arrival Time </label>
+
+                            <div class="col-sm-9">
+                                <input type="text"readonly required name="end_time" value="{{bus.End_time}}" id="form-field-2" placeholder=" Arrival Time" class="col-xs-10 col-sm-5"  />
+                                </div>
+                        </div>
+<!--                           
+
+                        <div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Schedule to</label>
+
+                                        <div class="col-sm-9">
+                                        <select name="schedule_id" class="col-xs-10 col-sm-5 " required>
+                                        <option value="">Select...</option>
+                                        {% for schedule  in schedules %}
+									
+                                        <option value="{{i.id}}">{{schedule.schedule_name}}</option>
+                                        {% endfor %}  
+                                        </select>
+
+                                        </div></div> -->
+                        
+                        {% endif %}
+
+                        <!-- <div class="space-4"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Schedule </label>
+
+                        <div class="hidden-sm hidden-xs action-buttons"> -->
+                            <!-- <a class='blue' href=""> <span>Add</span>
+                                <i class='ace-icon fa fa-check bigger-130'></i>
+                            </a>                          -->
+                            <!-- <a class='white submit-button' href="/schedule_bus1/{{bus.id}}">
+  <i class='ace-icon fa fa-check bigger-130' aria-label="Submit"></i>  <span>ADD</span>
+</a>
+                        </div> -->
+                       <div class="space-4"></div>
+                        <div class="clearfix form-actions">
+                            <div class="col-md-offset-3 col-md-9">
+                                <div class="form-group">       
+                                <div class="hidden-sm hidden-xs action-buttons">
+                                    <!-- <a class='blue' href=""> <span>Add</span>
+                                        <i class='ace-icon fa fa-check bigger-130'></i>
+                                    </a>                          -->
+                                    <a class='white submit-button' href="/schedule_bus1/{{bus.id}}">
+          <i class='ace-icon fa fa-check bigger-130' aria-label="Submit"></i>  <span>ADD SCHEDULE</span>
+        </a>
+                                </div>
+
+                               
+                            </div>
+                        </div>
+                        
+                        </form>
+                        {% endif %}
+                    </div><!-- PAGE CONTENT ENDS -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.page-content -->
+</div><!-- /.main-content -->
+
+
+
+<script>
+    setTimeout(function(){
+       if($('#msg').length>0){
+          $('#msg').remove();
+       }
+    },2000)
+ </script>
+
+ 
+<style>
+    .submit-button{
+            border: 1px solid blue; /* Add border with width and color */
+            background-color:rgb(26, 188, 225) ;
+            
+            padding: 5px 10px; /* Add some padding inside the button */
+            border-radius: 4px; /* Add rounded corners for a smoother look (optional) */
+            color: inherit; /* Inherit color from parent element (likely black) */
+            text-decoration: none; /* Remove underline from text */
+            display: inline-block; /* Allow setting width and height */
+            }
+
+            .submit-button:hover { /* Add hover effect (optional) */
+            background-color: #e0e0e0; /* Light blue background on hover */
+            }
+ </style>
+<script>
+    setTimeout(function(){
+       if($('#msg').length>0){
+          $('#msg').remove();
+       }
+    },2000)
+ </script>
+{% include 'admins/ad_footer.html' %}

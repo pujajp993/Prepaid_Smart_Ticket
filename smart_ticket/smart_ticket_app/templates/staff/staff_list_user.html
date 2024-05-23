@@ -1,0 +1,68 @@
+{% include 'staff/s_header.html' %}
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Staff</a>
+                </li>
+                <li class="active">View User List</li>
+            </ul><!-- /.breadcrumb -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="header smaller lighter blue">User List</h3>
+
+                            
+                            <!-- div.table-responsive -->
+
+                            <!-- div.dataTables_borderWrap -->
+                            <div>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No</th>
+                                            <th>Name</th>
+                                            <th>Address</th>	
+                                            <th>Email</th>	
+                                            <th>Contact</th>
+                                            <th>District</th>
+                                            <th>State</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    {% for i in  user %} 
+                                                            
+                                    <tr>
+                                        <td>{{forloop.counter}}</td>
+                                        
+                                        <td>{{i.first_name}}</td>
+                                        <td>{{i.Address}}</td>  
+                                        <td>{{i.email}}</td>
+                                        <td>{{i.Phone_no}}</td> 
+                                        <td>{{i.District}}</td> 
+                                        <td>{{i.State}}</td> 
+                                                        
+                                        </div>
+                                    </td>
+                                       {% endfor %}
+                                </tr>
+    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+    </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+    
+           
+{% include 'staff/s_footer.html' %}

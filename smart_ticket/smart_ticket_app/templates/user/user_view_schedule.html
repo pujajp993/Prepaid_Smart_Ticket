@@ -1,0 +1,48 @@
+{% include 'user/u_header.html' %}
+{% include 'user/sidebar.html' %}
+
+<div class="col-md-8">
+    <div class="panel panel-success">
+                        <div class="panel-heading"><b>
+                         Scheduled List</b>  
+                        </div>
+                     
+                                   </div> 
+
+              <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                      <tr>
+                                            <th>Sl No</th>
+                                            <th>Schedules</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        {% for i in schedules %} 
+                                        <tr>
+                                            <td>{{forloop.counter}}</td>                                        
+												<td>{{i.schedule_name}}</td>
+                                                <td><div class="hidden-sm hidden-xs action-buttons">					
+																<button type="button" class="btn btn-info">
+                                                                    <a class='green' href="/user/user_view_schedule1/{{i.id}}">
+																	<font color="red">Bus Schedules</font>
+																</a></button>
+															</div>
+														</td>
+													{% endfor %}
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+
+
+
+            {% include 'user/u_footer.html' %}
+

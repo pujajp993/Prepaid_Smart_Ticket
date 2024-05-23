@@ -1,0 +1,35 @@
+{% include 'user/u_header.html' %}
+{% include 'user/sidebar.html' %}
+
+<div class="col-md-8">
+    <div class="panel panel-success">
+                        <div class="panel-heading"><b>
+                           Bus Details</b>  
+                        </div></div>
+                        <table id="example1" class="table table-bordered table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Sl No</th>
+                                                            <th>Bus Type</th>	
+                                                            <th>Minimum Charge</th>	
+                                                            
+                                                            
+                                                        </tr>
+                                                    </thead>
+                
+                                                    <tbody>
+                                                        {% for i in buses %} 
+                                                        <tr>
+                                                                <td>{{forloop.counter}}</td>                                                                      
+                                                                <td>{{ i.bus_type_id.Bus_type }}</td> 
+                                                                <td>{{i.min_charge}}</td> 
+                                                            </td>
+                                                            {% endfor %}
+                                                        </tr>
+                                                        </tbody>
+                                                        </table>
+                                                        </div></div></div></div>
+                
+
+
+{% include 'user/u_footer.html' %}

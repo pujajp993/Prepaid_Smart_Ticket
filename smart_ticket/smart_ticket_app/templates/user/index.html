@@ -1,0 +1,821 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>Prepaid Smart Ticket</title>
+      <link rel="stylesheet" href="{% static 'user/css/components.css' %}">
+      <link rel="stylesheet" href="{% static 'user/css/responsee.css' %}">
+      <link rel="stylesheet" href="{% static 'user/owl-carousel/owl.carousel.css' %}">
+      <link rel="stylesheet" href="{% static 'user/owl-carousel/owl.theme.css' %}">
+      <!-- CUSTOM STYLE -->
+      <link rel="stylesheet" href="{% static 'user/css/template-style.css' %}">
+	  <!-- Bootstrap-CSS --><link rel="stylesheet" href=" {% static 'user/css/bootstrap.min.css' %}">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="{% static 'user/js/jquery-1.8.3.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'user/js/jquery-ui.min.js' %}"></script>  
+	  <!-- JQuery --><script src="{% static 'user/js/jquery.min.js' %}"></script> 
+      <script type="text/javascript" src="{% static 'user/js/modernizr.js' %}"></script>
+      <script type="text/javascript" src="{% static 'user/js/responsee.js' %}"></script>
+	   <!-- Bootstrap-Main --><script src="{% static 'user/js/bootstrap.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'user/js/template-scripts.js' %}"></script> 
+                 
+      <!--[if lt IE 9]>
+	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+   </head>
+   <body class="size-1140">
+      <!-- TOP NAV WITH LOGO -->
+       
+      <header>
+         <div id="topbar">
+            <div class="line">
+              <div class="s-12 m-6 l-6">
+                 <p></p>
+               </div>
+               <div class="s-12 m-6 l-6">
+                  <div class="social right">
+                     <a><i class="icon-facebook_circle"></i></a> <a><i class="icon-twitter_circle"></i></a> <a><i class="icon-google_plus_circle"></i></a> <a><i class="icon-instagram_circle"></i></a>
+                  </div>
+               </div>
+            </div>  
+         </div> 
+         <nav>
+            <div class="line">
+               <div class="s-12 l-2">
+                  <p class="logo"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PREPAID </strong></p>
+                  <p class="logo"><strong>SMART</strong>&nbsp;<strong>TICKET</strong></p>
+               </div>
+               <div class="top-nav s-12 l-10">
+                  <p class="nav-text">Custom menu text</p>
+                  <ul class="right">
+                     <li class="active-item"><a href="#carousel">Home</a></li>
+					 <li><a href="#about-us">About Us</a></li>
+                     <li><a href="#gallery">Gallery</a></li>
+					 <li><a href="#features">Bus Details</a></li>
+                     <li><a href="#services">Fare Details</a></li>
+                     <li><a href="#contact">Contact</a></li>
+					 <li><a href="#" data-toggle="modal" data-target="#myModalregister" class="scroll wow fadeInRight" data-wow-delay="2.8s">Register</a></li>
+           <li><a href="#" data-toggle="modal" data-target="#myModalregister2" class="scroll wow fadeInRight" data-wow-delay="2.8s">Login</a></li>
+                  </ul>
+               </div>
+            </div>
+            {% include 'user/messages.html' %}
+         </nav>		
+      </header>  
+      <section>
+         <!-- CAROUSEL --> 
+         <div id="carousel">
+            <div id="owl-demo" class="owl-carousel owl-theme"> 
+               <div class="item">
+                  <img src="{% static 'user/img/first.jpg' %}" alt="">
+                  <!--<div class="line"> 
+                     <div class="text hide-s">
+                        <div class="line"> 
+                          <div class="prev-arrow hide-s hide-m">
+                             <i class="icon-chevron_left"></i>
+                          </div>
+                          <div class="next-arrow hide-s hide-m">
+                             <i class="icon-chevron_right"></i>
+                          </div>
+                        </div> 
+                        <h2>Free Onepage Responsive Template</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+                     </div>
+                  </div>-->
+               </div>
+               <div class="item">
+                  <img src="{% static 'user/img/second.jpg' %}" alt="">
+                  <!--<div class="line">
+                     <div class="text hide-s"> 
+                        <div class="line"> 
+                          <div class="prev-arrow hide-s hide-m">
+                             <i class="icon-chevron_left"></i>
+                          </div>
+                          <div class="next-arrow hide-s hide-m">
+                             <i class="icon-chevron_right"></i>
+                          </div>
+                        </div> 
+                        <h2>Fully Responsive Components</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+                     </div>
+                  </div>-->
+               </div>
+               <div class="item">
+                  <img src="{% static 'user/img/third.jpg' %}" alt="">
+                  <!--<div class="line">
+                     <div class="text hide-s">
+                        <div class="line"> 
+                          <div class="prev-arrow hide-s hide-m">
+                             <i class="icon-chevron_left"></i>
+                          </div>
+                          <div class="next-arrow hide-s hide-m">
+                             <i class="icon-chevron_right"></i>
+                          </div>
+                        </div> 
+                        <h2>Build new Layout in 10 minutes!</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+                     </div>
+                  </div>-->
+               </div>
+            </div>
+         </div>
+         <!-- FIRST BLOCK -->
+         <div id="first-block">
+            <div class="line">
+               <h1>Amazing Development of KSRTC</h1>
+               <p></p>
+               <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contact Us</a></div>
+            </div>
+         </div>
+       
+        
+         <!-- ABOUT US -->
+         <div id="about-us">
+            <div class="s-12 m-12 l-6 media-container">
+               <img src="{% static 'user/img/ksrtc1.jpg' %}" alt="">
+            </div>
+            <article class="s-12 m-12 l-6">
+               <h2>We are<br> Smart Ticket<br> Providers</h2>
+               <p>The Kerala State Road Transport Corporation (KSRTC) has come up with a solution to tackle the shortage of small denomination currencies which has been causing inconvenience to both the commuters and staff. The corporation is all set to roll out travel cards which offer an unlimited travel for a month, in the denominations of Rs 1000, Rs 1,500 and Rs 3,000.
+               </p>
+               <div class="about-us-icons">
+                  <i class="icon-paperplane_ico"></i> <i class="icon-trophy"></i> <i class="icon-clock"></i>
+               </div>
+            </article>
+         </div>
+         <!-- OUR WORK -->
+         <div id="gallery">
+            <div class="line">
+               <h2 class="section-title">Gallery</h2>
+               <div class="tabs">
+                  <div class="tab-item tab-active">
+                    <a class="tab-label active-btn"></a>
+                    <div class="tab-content">
+                      <div class="margin">
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4></h4><p></p></div><img src="{% static 'user/img/b_1.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4></h4><p></p></div><img src="{% static 'user/img/b_2.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4></h4><p></p></div><img src="{% static 'user/img/b_3.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4></h4><p></p></div><img src="{% static 'user/img/b_4.jpg' %}" alt=""></a></div>
+                      </div>
+                    </div>  
+                  </div>
+               </div>
+            </div>
+         </div>    
+  <!-- FEATURES -->
+ <div id="features">
+            <div class="line">
+               <div class="margin">
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon3x"></i>
+                     <h2>AC Volvo</h2>
+                     <p>Newly introduced long distance services on 12 m chassis, with more leg room and rear air suspension. Same fare as a Super Express</p>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon3x"></i>
+                     <h2>Superfast</h2>
+                     <p>Fast, long distance services with 3x2 seating layout.</p>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon3x"></i>
+                     <h2>Fast</h2>
+                     <p>Short and long distance no frill services with 3x2 seating layout.</p>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon3x"></i>
+                     <h2>Ordinary</h2>
+                     <p>Short routes served by older buses that used to run on higher grade services.</p>
+                  </div>
+               </div>
+            </div>
+         </div>		 
+         <!-- SERVICES -->
+         <div id="services">
+            <div class="line">
+               <h2 class="section-title">Fare Details</h2>
+               <div class="margin">
+                  <div class="s-12 m-6 l-4 margin-bottom">
+                     <i class="icon-eye"></i>
+                     <div class="service-text">
+                        <h3>Revised Fare</h3>
+                        <p>64 paise for City/Ordinary Services, 68 paise for City Fast Services,
+68 paise for Fast Passenger/Limited Stop FP Services,
+72 paise for Super Fast Services,
+
+77 paise for Super Express Services,
+
+90 paise for Super Deluxe/Semi Sleeper Services,
+
+110 paise for Luxury/High-Tech/Air Conditioned Services,
+
+130 paise for Volvo Services &
+
+191 paise for Multi Axle Volvo Services.</p>
+                     </div>
+                  </div>
+                  <div class="s-12 m-6 l-4 margin-bottom">
+                     <i class="icon-eye"></i>
+                     <div class="service-text">
+                        <h3>Minimum Charge</h3>
+                        <p>
+Rupees 7.00 for City/Ordinary services/City Fast Services,
+
+Rupees 10.00 for Fast passenger/ Limited Stop Fast Passenger Services,
+
+Rupees 13.00 for Super Fast Services,
+
+Rupees 20 00 for Super Express,
+
+Rupees 28 for Super Deluxe/ Semi Sleeper Services,
+
+Rupees 40 for Luxury/Hi-tech/Air Conditioned/Volvo Services &
+
+Rupees 70 for Multi Axle Volvo Services.</p>
+                     </div>
+                  </div>
+                  <div class="s-12 m-12 l-4 margin-bottom">
+                     <i class="icon-eye"></i>
+                     <div class="service-text">
+                        <h3>Historical Fare</h3>
+                        <p>Half a Chakram was the minimum fare in 1938. The first class tickets had cost 50% more than the coordinating rate. During that period free travel was allowed for children up to 3 years and only half the fare was charged for children until age 14. There were no luggage tickets, but when the luggage weighed more than 28 pounds up to 56 pounds, a fee was assessed for 4 chakras. </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- LATEST NEWS -->
+        <!-- <div id="latest-news">
+            <div class="line">
+              <h2 class="section-title">Latest News</h2> 
+              <div class="margin">
+                <div class="s-12 m-6 l-6">
+                  <div class="s-12 l-2">
+                    <div class="news-date">
+                      <p class="day">28</p><p class="month">AUGUST</p><p class="year">2015</p>
+                    </div>
+                  </div>
+                  <div class="s-12 l-10">
+                    <div class="news-text">
+                      <h4>First latest News</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                    </div>
+                  </div>   
+                </div> 
+                <div class="s-12 m-6 l-6">
+                  <div class="s-12 l-2">
+                    <div class="news-date">
+                      <p class="day">12</p><p class="month">JULY</p><p class="year">2015</p>
+                    </div>
+                  </div>
+                  <div class="s-12 l-10">
+                    <div class="news-text">
+                      <h4>Second latest News</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                    </div>
+                  </div>   
+                </div>  
+              </div>
+            </div>
+         </div> -->
+         <!-- CONTACT -->
+         <div id="contact">
+            <div class="line">
+               <h2 class="section-title">Contact Us</h2>
+               <div class="margin">
+                  <div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">
+                    <img src="{% static 'img/ksrtc_1.jpg' %}" alt="">
+                  </div>
+                  <div class="s-12 m-12 l-4 margin-bottom right-align">
+                     <h3>Prepaid - Smart Ticket</h3>
+                     <address>
+                        <p><strong>Adress:</strong> Thampanoor, Trivandrum - 695001</p>
+                        <p><strong>Country:</strong> India</p>
+                        <p><strong>E-mail:</strong> info@ksrtc.gov</p>
+                     </address>
+                     <br />
+                     <h3>Social</h3>
+                     <p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/pages/Vision-Design-graphic-ZOO/154664684553091">Responsee</a></p>
+                     <p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/myresponsee">Responsee</a></p>
+                     <p class="margin-bottom"><i class="icon-twitter icon"></i> <a href="https://twitter.com/MyResponsee">Responsee</a></p>
+                  </div>
+                  <div class="s-12 m-12 l-5">
+                    <h3> contact form </h3>
+                    
+                    <form class="customform" method="post" action="contact_alerts">
+                     {% csrf_token %}
+                      <div class="s-12"><input name="cemail" placeholder="Your e-mail" title="Your e-mail"  type="email" required /></div>
+                      <div class="s-12"><input name="cname" placeholder="Your name" title="Your name"  type="text"  required="required" /></div>
+                      <div class="s-12"><textarea placeholder="Your message" name="message" rows="5"  required="required" ></textarea></div>
+                      <div class="s-12 m-12 l-4"><button class="color-btn" type="submit" name="contact">Submit</button></div>
+                    </form>
+                  </div>                
+               </div>
+            </div>
+         </div>
+         <!-- MAP -->
+      
+      </section>
+      <!-- FOOTER -->
+      <footer>
+         <div class="line">
+            <div class="s-12 l-6">
+               <p>Prepaid Smart Ticket</p>
+               
+            </div>
+            <div class="s-12 l-6">
+               <a class="right" href="#" title="Responsee - lightweight responsive framework">Designed by Pooja L</a>
+            </div>
+         </div>
+      </footer>
+      <script type="text/javascript" src="{% static 'user/owl-carousel/owl.carousel.js' %}"></script>
+      <script type="text/javascript">
+         jQuery(document).ready(function($) {
+            var theme_slider = $("#owl-demo");
+            $("#owl-demo").owlCarousel({
+                navigation: false,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                autoPlay: 6000,
+                addClassActive: true,
+             // transitionStyle: "fade",
+                singleItem: true
+            });
+            $("#owl-demo2").owlCarousel({
+                slideSpeed: 300,
+                autoPlay: true,
+                navigation: true,
+                navigationText: ["&#xf007","&#xf006"],
+                pagination: false,
+                singleItem: true
+            });
+        
+            // Custom Navigation Events
+            $(".next-arrow").click(function() {
+                theme_slider.trigger('owl.next');
+            })
+            $(".prev-arrow").click(function() {
+                theme_slider.trigger('owl.prev');
+            })     
+        }); 
+      </script>
+	  <div class="modal fade" style="z-index:10000;"  id="myModalregister">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h3 class="modal-title">Register</h3>
+            </div>
+            <div class="modal-body">
+               <div class="container">
+		<div class="col-lg-7">
+
+	<div id="login-form">
+    <form method="post" name="myForm" action="index">
+      {% csrf_token %}
+      <!-- <center>
+         {% if messages %}
+         {% for message in messages %}
+         {% if message.tags == 'error' %}
+         <div class="alert alert-danger" role="alert">
+            {{message}}
+         </div>
+         {% else %}
+         <div class="alert alert-success" role="alert">
+            {{message}}
+         </div>
+         {% endif %}
+         {% endfor %}
+         {% endif %}
+      </center> -->
+        	<div class="col-md-12">
+        
+        	<div class="form-group">
+            	<hr />
+            </div>
+            <div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<input type="text" name="name" class="form-control" required placeholder="Enter Name" maxlength="50" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<input type="email" name="email" class="form-control" required onchange="checkemail(this)" placeholder="Enter Email" maxlength="40" />
+                </div>
+            </div>
+			
+             <div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<textarea name="addrs" class="form-control" required placeholder="Enter  Address" maxlength="400" /></textarea>
+                </div>
+            </div>
+			<div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            			<input type="text" name="phno" onchange="ph(this)" class="form-control" placeholder="Enter Contact Number"  />
+                </div>  
+            </div>
+			<div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<input type="date" name="dob" required class="form-control" placeholder="Enter date of Birth" maxlength="40" />
+                </div>  
+            </div>
+			<div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<input type="text" name="district" onchange="checkchr(this)" required class="form-control" placeholder="Enter District" maxlength="40"  />
+                </div> 
+            </div>
+			<div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<input type="text" name="state" onchange="checkchr(this)" required class="form-control" placeholder="Enter State" maxlength="40"  />
+                </div> 
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+              <input type="text" name="aadharno" onchange="card(this)"  required class="form-control" placeholder="Aadhaar Card Number"  />
+                </div> 
+            </div>
+			<div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<select class="form-control" placeholder="Select Role" required name="role">
+				<option>...Select role....</option>
+				<option value="2">User</option>
+				<option value="3">Staff</option>
+				</select>
+                </div> 
+            </div>
+			<div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<input type="text" name="username" required class="form-control" placeholder="Enter Username" maxlength="40" />
+                </div>
+				
+            </div>
+			<div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<input type="password" name="pass" required class="form-control" placeholder="Enter password" maxlength="40"/>
+                </div>
+				
+            </div> 
+			<div class="form-group">
+            	<div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+            	<input type="password" name="cpass" class="form-control" placeholder="Re-enter password" maxlength="40" />
+                </div>
+				
+            </div>
+            <div class="form-group">
+            	<hr />
+            </div>
+            
+            <div class="form-group">
+            	<button type="submit" class="btn btn-block btn-success" name="btn-signup">Sign Up</button>
+            </div>
+        </div>
+   
+    </form>
+	
+    </div>	
+
+</div>
+</div>
+            </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+          </div><!-- /.modal-content -->
+         </div><!-- /.modal-dialog -->  
+      
+   </div>
+     <div class="modal fade" style="z-index:10000;"  id="myModalregister2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h3 class="modal-title">Login</h3>
+            </div>
+            <div class="modal-body">
+               <div class="container">
+<div class="col-lg-7">
+
+  <div id="login-form">
+    <form method="post" action="user_login">
+           
+      <div class="col-md-12">
+        
+          <div class="form-group">
+              <hr />
+            </div>
+            
+           
+            {% csrf_token %}
+      <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+             <input class="form-control" name="user_name" type="text" placeholder="Username" maxlength="40" required  />
+          
+                </div>
+        
+            </div>
+      <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><span class=""></span></span>
+              <input class="form-control" name="password" type="password" placeholder="Password" maxlength="40" required/>
+        
+                </div>
+        
+            </div> 
+    
+            <div class="form-group">
+              <hr />
+            </div>
+            
+            <div class="form-group">
+              <button type="submit" class="btn btn-block btn-success" name="btn-login">Sign in</button>
+            </div>
+            
+            <div class="form-group">
+              <hr />
+            </div>
+            
+          
+        
+        </div>
+   
+    </form>
+    </div>  
+
+</div>
+</div>
+            </div>
+              <div class="modal-footer">
+            
+             
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+          </div><!-- /.modal-content -->
+         </div><!-- /.modal-dialog -->  
+ <script>
+function checkchr(a)
+{
+	var x=a.value;
+	var letters=/^[A-Za-z ]+$/;
+	if(!x.match(letters))
+	{
+		alert("please input alphabets");
+		a.value=" ";
+		a.focus();
+	}
+	
+}
+/*function checknm(a)
+{
+	var x=a.value;
+	if(isNaN(x))
+	{
+		alert("please input numbers");
+		a.value=" ";
+		a.focus();
+	}
+}*/
+function phoneno(){          
+            $('#phone').keypress(function(e) {
+                var a = [];
+                var k = e.which;
+
+                for (i = 48; i < 58; i++)
+                    a.push(i);
+
+                if (!(a.indexOf(k)>=0))
+                    e.preventDefault();
+            });
+        }
+function cardno(){          
+            $('#card').keypress(function(e) {
+                var a = [];
+                var k = e.which;
+
+                for (i = 48; i < 60; i++)
+                    a.push(i);
+
+                if (!(a.indexOf(k)>=0))
+                    e.preventDefault();
+            });
+        }
+function checkpin(a)
+{
+	var x=a.value;
+	if(isNaN(x))
+	{
+		a.value=" ";
+		a.focus();
+	}
+	else if(x.length==6)
+	{
+	}	
+	else
+		alert("Enter 6 digits for pincode");
+}
+/*function checkaadh(a)
+{
+  var x=a.value;
+  if(isNaN(x))
+  {
+    a.value=" ";
+    a.focus();
+  }
+  else if(Num(x).length!=12)
+  {
+	  alert("Enter 12 digits for Aadhaar");
+    a.value=" ";
+    a.focus();
+  } 
+  else
+  {
+	  
+  }
+}*/
+function checkph(a)
+{
+	var x=a.value;
+	if(isNaN(x))
+	{
+		a.value=" ";
+		a.focus();
+	}
+	else if(x.length<10 || x.length<11)
+	{
+		alert("enter 10 or 11 digits");
+		 a.value=" ";
+		a.focus();
+	}
+	else
+	{
+		
+	}
+		
+		
+}
+
+
+function checkemail(a)
+{
+	var mail=/^\w+([\.]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(a.value.match(mail))
+	{
+		
+	}
+	else
+	{
+		alert("enter valid email id");
+		
+		a.focus();
+	}
+}
+function checkpwd()
+{
+	var a=document.getElementById("t8").value;
+	var b=document.getElementById("t9").value;
+	if(a!=b)
+	{
+		alert("password mismatch");
+	}
+}</script>
+<script>
+function ph(a)
+{
+	 var y = a.value;
+	
+	 if(isNaN(y)||y.indexOf(" ")!=-1)
+           {
+              alert("enter 10 digits");
+			  a.value=" ";
+				a.focus();
+              return false; 
+           }
+           if (y.length>10)
+           {
+                alert("enter 10 digits");
+				a.value=" ";
+				a.focus();
+                return false;
+           }
+		   if(y.length<10)
+		   {
+			   
+                alert("enter 10 digits");
+				a.value=" ";
+				a.focus();
+                return false;
+		   }
+          
+}
+</script>
+<script>
+  function card(v)
+{
+  var x = v.value;
+   if(isNaN(x)||x.indexOf(" ")!=-1)
+           {
+              alert("enter 12 digits");
+        a.value=" ";
+        a.focus();
+              return false; 
+           }
+           if (x.length>12)
+           {
+                alert("enter 12 digits");
+        a.value=" ";
+        a.focus();
+                return false;
+           }
+       if(x.length<12)
+       {
+         
+                alert("enter 12 digits");
+        a.value=" ";
+        a.focus();
+                return false;
+       }
+}
+</script>
+   </div>
+   <script>
+      setTimeout(function(){
+         if($('#msg').length>0){
+            $('#msg').remove();
+         }
+      },2000)
+   </script>
+   </body>
+</html>
+<!--<script type="text/javascript">
+  function validateForm()
+    {
+   var x=document.forms["myForm"]["name"].value;
+   var letters = /^[A-Za-z ]+$/;
+     if(!x.match(letters))
+     {
+             alert(" Name should be Aphabet");
+             return false;
+     }
+   
+   var x=document.forms["myForm"]["email"].value
+    var atpos=x.indexOf("@");
+    var dotpos=x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+      {
+      alert("Not a valid e-mail address");
+      return false;
+      }
+  var x=document.forms["myForm"]["phno"].value;
+  var letters=/^\d{10}$/;
+  if(!x.match(letters))
+  {
+    alert("please Add 10 Digit phone number");
+    document.forms["myForm"]["phno"].value=" ";
+    document.forms["myForm"]["phno"].focus();
+    return false;
+  }
+  var x=document.forms["myForm"]["username"].value;
+   var letters = /^[A-Za-z ]+$/;
+     if(!x.match(letters))
+     {
+             alert("username should be Aphabet");
+             return false;
+     }
+  var x=document.forms["myForm"]["addrs"].value;
+   var letters = /^[0-9a-zA-Z]+$/;
+     if(!x.match(letters))
+     {
+             alert("field should not Null");
+             return false;
+     } 
+   var x=document.forms["myForm"]["district"].value;
+   var letters = /^[A-Za-z ]+$/;
+     if(!x.match(letters))
+     {
+             alert("field should not Null");
+             return false;
+     } 
+   var x=document.forms["myForm"]["state"].value;
+   var letters = /^[A-Za-z ]+$/;
+     if(!x.match(letters))
+     {
+             alert("field should not Null");
+             return false;
+     } 
+    }
+</script>-->

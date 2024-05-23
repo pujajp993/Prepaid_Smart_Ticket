@@ -1,0 +1,184 @@
+{% include 'admins/ad_header.html' %}
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Bus</a>
+                </li>
+                <li class="active">Edit Bus</li>
+            </ul><!-- /.breadcrumb -->
+            </div>
+
+
+
+
+
+            <div class="page-content">
+						<div class="page-header">
+							<h1>
+								Edit Bus Details
+								</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" method="post" action="/edit_bus1/{{a1.id}}">
+                                    
+                                    {% csrf_token %}
+								<input type="hidden" name="bus_id" value="">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Bus No</label>
+
+										<div class="col-sm-9">
+											<input type="text" readonly name="bus_no" value="{{a1.bus_no}}"  id="form-field-1" placeholder="Bus No" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Source</label>
+
+										<div class="col-sm-9">
+											<input type="text" onchange="checkchr(this)" required name="source" value="{{a1.Source}}"  id="form-field-1" placeholder="Starting" class="col-xs-10 col-sm-5"  />
+										</div>
+									</div>
+
+									<div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Starting Time</label>
+
+										<div class="col-sm-9">
+											<input type="time" required name="start_time" value="{{a1.Start_time}}"  id="form-field-1" placeholder="Departire Time" class="col-xs-10 col-sm-5"  />
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Destination </label>
+
+										<div class="col-sm-9">
+											<input type="text" onchange="checkchr(this)" required name="destination" value="{{a1.Destination}}" id="form-field-1" placeholder="Destination" class="col-xs-10 col-sm-5"  />
+										</div>
+									</div>
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Arrival Time </label>
+
+										<div class="col-sm-9">
+											<input type="time" required name="end_time" value="{{a1.End_time}}" id="form-field-2" placeholder=" Arrival Time" class="col-xs-10 col-sm-5"  />
+											</div>
+									</div>
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit" name="upd_bus">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												Submit
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												Reset
+											</button>
+										</div>
+									</div>
+									</form>
+									
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+<script>
+function checkchr(a)
+{
+	var x=a.value;
+	var letters=/^[A-Za-z ]+$/;
+	if(!x.match(letters))
+	{
+		alert("please input alphabets");
+		a.value=" ";
+		a.focus();
+	}
+	
+}
+function checknm(a)
+{
+	var x=a.value;
+	if(isNaN(x))
+	{
+		alert("please input numbers");
+		a.value=" ";
+		a.focus();
+	}
+}
+function checkpin(a)
+{
+	var x=a.value;
+	if(isNaN(x))
+	{
+		a.value=" ";
+		a.focus();
+	}
+	else if(x.length==6)
+	{
+	}	
+	else
+		alert("Enter 6 digits for pincode");
+		
+		
+}
+function checkph(a)
+{
+	var x=a.value;
+	if(isNaN(x))
+	{
+		a.value=" ";
+		a.focus();
+	}
+	else if(x.length>=10 && x.length<=11)
+	{
+	}
+	else
+		alert("enter 10 or 11 digits");
+		
+		
+}
+function checkemail(a)
+{
+	var mail=/^\w+([\.]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(a.value.match(mail))
+	{
+		
+	}
+	else
+	{
+		alert("enter valid email id");
+		
+		a.focus();
+	}
+}
+function checkpwd()
+{
+	var a=document.getElementById("t8").value;
+	var b=document.getElementById("t9").value;
+	if(a!=b)
+	{
+		alert("password mismatch");
+	}
+}</script>
+
+			
+{% include 'admins/ad_footer.html' %}

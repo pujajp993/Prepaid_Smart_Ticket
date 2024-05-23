@@ -1,0 +1,108 @@
+{% include 'admins/ad_header.html' %}
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Staff</a>
+                </li>
+                <li class="active">Approve Staff</li>
+            </ul><!-- /.breadcrumb -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="header smaller lighter blue">Approve Staff</h3>
+
+                            
+                            <!-- div.table-responsive -->
+
+                            <!-- div.dataTables_borderWrap -->
+                            <div>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No</th>
+                                            <th>Staff Id</th>
+                                            <th>Name</th>
+                                            <th>Address</th>	
+                                            <th>Email</th>	
+                                            <th>Contact No</th>
+                                            <th>District</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        {% for i in staff %} 
+                                                            
+                                        <tr>
+                                            <td>{{forloop.counter}}</td>
+                                            <td>{{i.Staff_id}}</td>
+                                            <td>{{i.first_name}}</td>
+                                            <td>{{i.Address}}</td>  
+                                            <td>{{i.email}}</td>
+                                            <td>{{i.Phone_no}}</td> 
+                                            <td>{{i.District}}</td> 
+                                            <td><div class="btn-group">
+                                                <button type="button" class="btn btn-info btn-flat">Actions</button>
+                                                                <button type="button" class="btn btn-info btn-flat dropdown-toggle" data-toggle="dropdown">
+                                                                  <span class="caret"></span>
+                                                                  <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <ul class="dropdown-menu" role="menu">
+                                                                    <form class="form-horizontal" method="post" action="/staff_approve1/{{i.user_ptr_id}}" name="staff_id" value="">
+                                                                        {% csrf_token %}
+                                                                          <center><li><button class="btn btn-success" hr type="submit" name="upd_status">
+                                                                          Approve
+                                                                          </button></li></center>
+                                                                          </form>
+                                                                                                      <br>
+                                                                  <form class="form-horizontal" method="post" action="/staff_rejection/{{i.user_ptr_id}}"><input type="hidden" name="staff_id" value="">
+                                                                    {% csrf_token %}
+                                                                          <input type="hidden" name="user_id" value="">
+                                                                          <center><li><button class="btn btn-danger" type="submit" name="del">
+                                                                          Delete
+                                                                          </button></li></center>
+                                                                          </form>
+                                                                 
+                                           
+
+                                            <!-- <td>{{ i.bus_type_id.Bus_type }}</td>  -->
+
+
+                                        </div>
+                                    </td>
+                                       {% endfor %}
+                                </tr>
+    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+    </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+    
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include 'admins/ad_footer.html' %}

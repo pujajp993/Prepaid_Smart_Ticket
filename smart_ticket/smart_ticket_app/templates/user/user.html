@@ -1,0 +1,42 @@
+{% include 'user/u_header.html' %}
+{% load static %}
+{% include 'admins/messages.html' %}
+<div class="content-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                    <h5 class="page-head-line">Smart Tickets Welcomes you...</h5><span></span>
+                    <p>The public-sector undertaking will issue Platinum, gold, and silver monthly travel cards at rates of  3,000, 1,500 and 1,000 respectively. These included air-conditioned low-floor, JNNURM non-air-conditioned, super fast, fast passenger, ordinary limited stop, city ordinary, and city fast buses.</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+               
+                    <div class="col-md-4 alert alert-success">
+                     <img class="img-responsive" src="{% static 'user/img/3.jpg' %}" alt="" style="padding-left:30px;" />   
+                     </div>
+                    
+                    <div class="col-md-4 alert alert-success">
+                         
+                         <img class="img-responsive" src="{% static 'user/img/2.jpg' %}" alt="" style="padding-left:30px;"/> 
+                        
+                    </div>
+                    <div class="col-md-4 alert alert-success">
+                         <img class="img-responsive" src="{% static 'user/img/1.jpg' %}" alt="" style="padding-left:30px;"/> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<script>
+    setTimeout(function(){
+       if($('#msg').length>0){
+          $('#msg').remove();
+       }
+    },2000)
+ </script>
+{% include 'user/u_footer.html' %}

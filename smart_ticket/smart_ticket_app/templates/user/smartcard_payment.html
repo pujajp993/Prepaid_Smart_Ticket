@@ -1,0 +1,60 @@
+{% include 'user/u_header.html' %}
+{% include 'user/sidebar.html' %}
+
+
+<div class="col-md-8">
+    <div class="notice-board">
+      <div class="panel panel-success">
+          <div class="panel-heading">
+       Make the Payment
+         
+</div>
+         
+
+<form class="form-horizontal" name="myForm"method="post" action="" >
+    {% csrf_token %}
+  <div class="panel-body">
+              <ul style="list-style: none; padding-left: 0px; margin-bottom: 10px;">
+                 <li style="padding: 10px;
+border-bottom: 1px solid #E5E5E5;">
+                    <label style="text-transform:capitalize;">
+                   <span class="glyphicon glyphicon-user text-success" ></span> 
+                           {{a.first_name}}<br>
+
+                               
+                    </label>
+                  </li>
+                   <li style="padding: 10px;
+border-bottom: 1px solid #E5E5E5;">
+                   <label style="text-transform:capitalize;">
+                       
+                  </li>
+                  
+
+              </ul>
+          </div>
+
+<div class="panel-footer">
+<div class="form-group">
+<label> Your Smart Card Amount is Rs.</label>
+<input type="number" class="form-control" class="amount" name="amount" value="" style="width:200px;">
+</div>
+<button type="submit" class="btn btn-success confirm" name="payment"><span class="glyphicon glyphicon-envelope"></span> Confirm</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+{% include 'user/u_footer.html' %}

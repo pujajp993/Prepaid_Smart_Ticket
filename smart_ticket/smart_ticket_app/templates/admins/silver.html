@@ -1,0 +1,73 @@
+{% include 'admins/ad_header.html' %}
+
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Silver</a>
+                </li>
+                <li class="active">Users</li>
+            </ul><!-- /.breadcrumb -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="header smaller lighter blue">Silver Card Users List</h3>
+
+                            
+                            <!-- div.table-responsive -->
+
+                            <!-- div.dataTables_borderWrap -->
+                            <div>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No</th>
+                                            <th>Name</th>
+                                            <th>Address</th>
+                                            <th>Email Id</th>	
+                                            <th>Phone No</th>
+                                            
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr> {% for i in data %}
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ i.first_name }}</td>
+                                            <td>{{ i.Address }}</td>
+                                            <td>{{ i.email }}</td>
+                                            <td>{{ i.Phone_no }}</td>
+                                            <td></td> 
+                                        </tr>
+                                    {% endfor %}</tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            <!-- PAGE CONTENT ENDS -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.page-content -->
+        </div><!-- /.main-content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include 'admins/ad_footer.html' %}

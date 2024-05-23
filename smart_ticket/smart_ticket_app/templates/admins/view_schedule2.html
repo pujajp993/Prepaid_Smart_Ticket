@@ -1,0 +1,68 @@
+{% include 'admins/ad_header.html' %}
+
+
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    
+                </li>
+                <li class="active">View Bus List</li>
+            </ul><!-- /.breadcrumb -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="header smaller lighter blue">Bus List</h3>
+
+                            
+                            <!-- div.table-responsive -->
+
+                            <!-- div.dataTables_borderWrap -->
+                            <div>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No</th>
+                                            <th>Bus No</th>
+                                            <th>Source</th>
+                                            <th>Destination</th>
+                                            <th>Departure Time</th>
+                                            <th>Arrival time</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    {% for i in x %} 
+                                    <tbody>
+                                        <tr>
+                                            <td>{{forloop.counter}}</td>                                                                      
+                                            <td>{{ i.bus_no }}</td> 
+                                            <td>{{i.Source}}</td> 
+                                            <td>{{i.Destination}}</td> 
+                                            <td>{{i.Start_time}}</td> 
+                                            <td>{{i.End_time}}</td> 
+
+                                        </td>
+                                        {% endfor %}
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                    </div></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+{% include 'admins/ad_footer.html' %}

@@ -1,0 +1,35 @@
+{% include 'user/u_header.html' %}
+{% include 'user/sidebar.html' %}
+  
+        <div class="col-md-8">
+          <form class="form-horizontal" name="myForm" method="post" action="">
+            {% csrf_token %}
+            
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <label style="text-transform:capitalize;">Your Profile </label>
+              </div>
+  
+              <div class="panel-body">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" required class="form-control" placeholder="Email" value="">
+  
+                  <label>Enter your Address:  </label>
+                  <textarea rows="4" name="address" required style="resize:none;" class="form-control"></textarea>
+                 <label>Contact No:</label>
+                  <input type="text" name="c_no" required class="form-control" placeholder="Contact No" value="" ><br>
+                 
+                  <button type="submit" class="btn btn-success" name="edit"><span class="glyphicon glyphicon-envelope"></span> Save </button>&nbsp;
+                  </div>
+             
+          </div>
+       </form>
+               </div>
+              
+          </div>
+
+      </div>
+  </div>
+</div>
+{% include 'user/u_footer.html' %}

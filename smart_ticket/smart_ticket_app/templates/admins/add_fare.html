@@ -1,0 +1,96 @@
+{% include 'admins/ad_header.html' %}
+
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Fare</a>
+                </li>
+                <li class="active">Add Fare</li>
+            </ul><!-- /.breadcrumb -->
+            </div>
+
+        <div class="page-content">
+            <div class="page-header">
+                <h1>
+                    Add Fare
+                    </h1>
+            </div><!-- /.page-header -->
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form class="form-horizontal" method="post" name="myForm"  onsubmit="return validateForm();" action="">
+                        {% include 'admins/messages.html' %}
+                        {% csrf_token %}
+                    <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Bus Type</label>
+                            <div class="col-sm-9">
+                                <select name="bus_type" class="col-xs-10 col-sm-5 " required>
+                                     <option value="">Select...</option>
+                                    {% for i in type %}
+                                        <option value="{{i.id}}">{{i.Bus_type}}</option>
+                                        {% endfor%}
+                               
+                                </select>
+                                </div>
+                            </div>
+                            
+                            
+                            
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Minimum Charge in Rs.</label>
+
+										<div class="col-sm-9">
+											<input type="text" name="min_chrg"  id="form-field-1" required placeholder="Minimum Charge" class="col-xs-10 col-sm-5"  />
+										</div>
+									</div>
+
+									<div class="space-4"></div>
+									
+									
+									<div class="space-4"></div>
+									
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit" name="add">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												Submit
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												Reset
+											</button>
+										</div>
+									</div>
+									</form>
+									
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+                    </div>
+
+
+                    
+
+
+<script>
+    setTimeout(function(){
+       if($('#msg').length>0){
+          $('#msg').remove();
+       }
+    },2000)
+ </script>
+{% include 'admins/ad_footer.html' %}

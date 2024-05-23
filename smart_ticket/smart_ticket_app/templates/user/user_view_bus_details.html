@@ -1,0 +1,56 @@
+{% include 'user/u_header.html' %}
+{% include 'user/sidebar.html' %}
+
+
+<div class="col-md-8">
+    <div class="panel panel-success">
+                        <div class="panel-heading"><b>
+                           Bus Details</b>  
+                        </div></div>
+
+                        
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sl No</th>
+                                    <th>Bus No</th>
+                                    <th>Bus Type</th>	
+                                    <th>Source</th>
+                                    <th>Departure Time</th>
+                                    <th>Destination</th>
+                                    <th>Arrival time</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for i in bus %} 
+                                                            
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{i.bus_no}}</td>                                
+                                    <td>{{ i.bus_type_id.Bus_type }}</td> 
+                                    <td>{{i.Source}}</td>
+                                    <td>{{i.Start_time}}</td>
+                                    <td>{{i.Destination}}</td>
+                                    <td>{{i.End_time}}</td>                             
+                                <td>
+                                    <div class="hidden-sm hidden-xs action-buttons">
+                                    
+                                </td>
+                                   {% endfor %}
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <!-- PAGE CONTENT ENDS -->
+    </div><!-- /.col -->
+</div><!-- /.row -->
+</div><!-- /.main-content -->
+
+	                      
+
+
+{% include 'user/u_footer.html' %}
+
