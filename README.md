@@ -82,7 +82,7 @@ There are 3 modules in this project. Admin module, User module, and Staff module
 4. Migrate the database (py manage.py makemigrations and py manage.py migrate)
 5. Run the project (py manage.py runserver)
 6. admin panel username:admin and password:admin (preset)
-7. when we type /user/index along with host lookback address we get the users index page
+7. when we type /user/index along with host lookback address we get the users index page.Based on the user registration credential login possible
 8. when we type staff/index along with host lookback address we get the Staff login page. staff panel username:staff and password:staff (preset)
 
 ## Screenshots for Admin page 
