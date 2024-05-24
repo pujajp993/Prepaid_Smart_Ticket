@@ -68,16 +68,19 @@ There are 3 modules in this project. Admin module, User module, and Staff module
 2. Any Editor (Preferably Visual Studio Code)
 3. Any web browser with latest version
    
-Languages and Technologies used
+## Languages and Technologies used
 1. HTML5/CSS3
 2. JavaScript (to create dynamically updating content)
 3. Bootstrap (An HTML, CSS, and JS library)
 4. Python Django framework
 5. SQLite
 
-Steps to run the project in your machine
+## Steps to run the project in your machine
 1. Download and install DB Browser in your machine
 2. Clone or download the repository
 3. Extract all the files
 4. Migrate the database (py manage.py makemigrations and py manage.py migrate)
 5. Run the project (py manage.py runserver)
+6. admin panel username:admin and password:admin (preset)
+7. when we type /user/index along with host lookback address we get the users index page
+8. when we type staff/index along with host lookback address we get the Staff login page. staff panel username:staff and password:staff (preset)
