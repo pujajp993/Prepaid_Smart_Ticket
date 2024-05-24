@@ -85,6 +85,29 @@ There are 3 modules in this project. Admin module, User module, and Staff module
 7. when we type /user/index along with host lookback address we get the users index page
 8. when we type staff/index along with host lookback address we get the Staff login page. staff panel username:staff and password:staff (preset)
 
+## Screenshots for Admin page 
+
+### Admin Login 
 ![admin](https://github.com/pujajp993/Prepaid_Smart_Ticket/assets/168622875/0b24010a-abd7-41bd-ba7b-456d17666735)
+
+### Admin Home 
+![Screenshot 2024-05-24 122054](https://github.com/pujajp993/Prepaid_Smart_Ticket/assets/168622875/27c84381-54f2-4d65-8b81-b06235edd32c)
+
+### User 
+![Screenshot 2024-05-24 121751](https://github.com/pujajp993/Prepaid_Smart_Ticket/assets/168622875/43ec68b7-3bb5-4322-a12c-845adb0923d7)
+
+### User Registration
+![Screenshot 2024-05-24 121808](https://github.com/pujajp993/Prepaid_Smart_Ticket/assets/168622875/d09fe46d-5ca0-4a45-83dc-6158eb2e0f3b)
+
+### User Home
+![Screenshot 2024-05-24 122000](https://github.com/pujajp993/Prepaid_Smart_Ticket/assets/168622875/bbe93510-4426-41be-8f4f-2eebd6092e72)
+
+### staff login
+![Screenshot 2024-05-24 122115](https://github.com/pujajp993/Prepaid_Smart_Ticket/assets/168622875/35831772-0529-44d3-802f-25b00d62937c)
+
+### staff Home
+![Screenshot 2024-05-24 122125](https://github.com/pujajp993/Prepaid_Smart_Ticket/assets/168622875/eb763632-4e5d-4577-8772-5c39fcf0205d)
+
+
 
 
