@@ -10,9 +10,9 @@ There are 3 modules in this project. Admin module, User module, and Staff module
 ## 1 Functions of administrative module:
    ### a. Add bus type:
                 In this case admin can add bus type like Ordinary, Fast, Super-fast, Volvo,Super express, Super deluxe etc.
-  ###  b. Add bus details:
+       b. Add bus details:
                 In this case admin can add bus number, bus type, source, starting time,destination, and arrival time.
-    ### c. View bus details:
+       c. View bus details:
                 Admin can view all the bus details add on the database with the details of bus number, bus type, source, departure time, destination, arrival time and the                   admin can edit and delete those bus details.
         d. Add fare:
                 Admin can add the fare details of bus by including the bus type and minimum charge of bus in rupees.
