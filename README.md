@@ -85,4 +85,6 @@ There are 3 modules in this project. Admin module, User module, and Staff module
 7. when we type /user/index along with host lookback address we get the users index page
 8. when we type staff/index along with host lookback address we get the Staff login page. staff panel username:staff and password:staff (preset)
 
-https://github.com/pujajp993/Prepaid_Smart_Ticket.wiki.git
+![admin](https://github.com/pujajp993/Prepaid_Smart_Ticket/assets/168622875/0b24010a-abd7-41bd-ba7b-456d17666735)
+
+
