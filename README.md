@@ -1,19 +1,19 @@
-PREPAID SMART TICKET
+# PREPAID SMART TICKET
 
 Prepaid Smart Ticket using SQLite,Python Django Framework,HTML,CSS,Bootstrap
 
-Description of the project :
+## Description of the project :
         The project entitled as “PREPAID SMART TICKET” is a project for students for developing prototypes of KSRTC season ticket booking system. The project aims to provide
 an effective solution of maintaining bus ticket using various cards categorized as platinum, gold and silver. The system has three logins one for user and other two for admin and staff.The user is provided with a website he/she can login to the corresponding website, it consists of details of validity of the card and the user can refill their account and extend the validity when the time expires. Thus, while travelling the users only need to show these cards to the conductor. The cards are categorized based on: using platinum cards users can travel everywhere in Kerala with fast, superfast, AC Volvo bus services and all other services of worth 3000, using gold cards users can travel in Kerala with ordinary and limited services of worth 1500 and using silver cards users can travel only within a district with ordinary and limited services of worth 1000. The admin module is handled by the admin who will look after all the activities taking place in the system and he will add bus, fare of bus, bus schedule etc.The staff can view the booking, cancellation details etc.
 
-Modules:
+## Modules:
 There are 3 modules in this project. Admin module, User module, and Staff module.
-# 1 Functions of administrative module:
-   a. Add bus type:
+## 1 Functions of administrative module:
+   ### a. Add bus type:
                 In this case admin can add bus type like Ordinary, Fast, Super-fast, Volvo,Super express, Super deluxe etc.
-   b. Add bus details:
+  ###  b. Add bus details:
                 In this case admin can add bus number, bus type, source, starting time,destination, and arrival time.
-        c. View bus details:
+    ### c. View bus details:
                 Admin can view all the bus details add on the database with the details of bus number, bus type, source, departure time, destination, arrival time and the                   admin can edit and delete those bus details.
         d. Add fare:
                 Admin can add the fare details of bus by including the bus type and minimum charge of bus in rupees.
