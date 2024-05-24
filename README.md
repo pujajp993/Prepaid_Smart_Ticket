@@ -8,7 +8,7 @@ an effective solution of maintaining bus ticket using various cards categorized 
 
 Modules:
 There are 3 modules in this project. Admin module, User module, and Staff module.
-1. Functions of administrative module:
+# 1 Functions of administrative module:
    a. Add bus type:
                 In this case admin can add bus type like Ordinary, Fast, Super-fast, Volvo,Super express, Super deluxe etc.
    b. Add bus details:
