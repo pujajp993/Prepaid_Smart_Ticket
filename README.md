@@ -8,11 +8,11 @@ Prepaid Smart Ticket using SQLite,Python Django Framework,HTML,CSS,Bootstrap
 ## Modules:
 There are 3 modules in this project. Admin module, User module, and Staff module.
 ## 1 Functions of administrative module:
-       a. Add bus type:
+        a. Add bus type:
                 In this case admin can add bus type like Ordinary, Fast, Super-fast, Volvo,Super express, Super deluxe etc.
-       b. Add bus details:
+        b. Add bus details:
                 In this case admin can add bus number, bus type, source, starting time,destination, and arrival time.
-       c. View bus details:
+        c. View bus details:
                 Admin can view all the bus details add on the database with the details of bus number, bus type, source, departure time, destination, arrival time and the                   admin can edit and delete those bus details.
         d. Add fare:
                 Admin can add the fare details of bus by including the bus type and minimum charge of bus in rupees.
@@ -34,7 +34,7 @@ There are 3 modules in this project. Admin module, User module, and Staff module
                 Admin can view the messages from the users.
         m. View contact form:
                 Admin can view the contact form send by use users in notification section
-## 1 Functions of User module:
+## 2 Functions of User module:
         a. Registration:
                 First of all, user want to register on the site. Then using the username and password they can login the site and can-do further activity
         b. My profile:
@@ -55,7 +55,7 @@ There are 3 modules in this project. Admin module, User module, and Staff module
         h. Feedback:
                 User can view the feedbacks from the admin.
 
-## 1 Functions of Staff module:
+## 3 Functions of Staff module:
         a. Booking details and generate bill-Future Enhancement:
                 In this case staff can view the bus booking details of users and can also view bill for each booking.
         b. View user details:
